@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ERP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- CSS Bootsrap sin conexion
+  <link rel="stylesheet" href="cssjssinconexion/bootstrap.min.css">
+  <script src="cssjssinconexion/jquery.min.js"></script>
+  <script src="cssjssinconexion/bootstrap.min.js"></script>
+-->
+ 
+
+  
+
+
+  <link rel="stylesheet" href="css.css">
+
+  <script src="js/BaseException.js"></script>
+  <script src="js/Objects.js"></script>
+  <script src="js/ERP.js"></script>
+  <script src="js/forma.js"></script>
+
+  <script>
+  //menu fijo al bajar con el scroll
+  $(document).ready(function(){
+    var altura = $('.menu').offset().top;
+      
+    $(window).on('scroll', function(){
+      if ( $(window).scrollTop() > altura ){
+        $('.menu').addClass('navbar-fixed-top');
+        document.getElementById("myDiv").style.marginTop = "100px"; 
+      } else {
+        $('.menu').removeClass('navbar-fixed-top');
+        document.getElementById("myDiv").style.marginTop = "0px"; 
+     
+      }
+    });
+     
+  });
+  </script>
+ 
+
+</head>
+<body id="init">
+<!--HEADER-->
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>ERP</h1>      
+    <p>Enterprise Resource Planning</p>
+  </div>
+</div>
+
+
+
+
+
+
+<!--MENU-->
+<nav class="navbar navbar-inverse menu ">
+
+  <div class="container"> 
+    
+    <div class="navbar-header"> <!--MENU MOVIL-->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <!--Relacion al menu myNavbar-->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="">ERP Logo</a>
+    </div>  <!--FIN MENU MOVIL-->
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">Inicio</a></li>
+        
+        <!--TIENDAS-->
+        <li class="dropdown tienda-nav">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="">Tiendas<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+          </ul>
+        </li>
+
+       
+
+        <!--CATEGORIAS-->
+        <li class="dropdown categorias-nav hidden">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="">Categorias<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+          </ul>
+        </li>
+
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" onclick="cerrarV()"><span class="glyphicon glyphicon-remove"></span> Cerrar Ventanas</a></li>
+        <li><a href=""><span class="glyphicon glyphicon-user"></span> Iniciar Sesion</a></li>
+        <li><a href=""><span class="glyphicon glyphicon-shopping-cart"></span> Carrito</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!--CONTAINER-->
+<div class="container" id="myDiv">    
+ 
+
+
+
+
+
+
+
+
+</div><br>
+
+
+</div><br><br>
+
+
+
+
+
+
+
+
+<!--FOOTER-->
+<footer class="container-fluid text-center"> 
+  <form class="form-inline">Obtener Ofertas:
+    <input type="email" class="form-control" size="50" placeholder="Direccion de Correo">
+    <button type="button" class="btn btn-success">Registrarte</button>
+  </form>
+</footer>
+
+</body>
+</html>
